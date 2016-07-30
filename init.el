@@ -6,17 +6,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Highlight corresponding parentheses when cursor is on one
-(show-paren-mode t)
-
-;; Highlight tabulations
-(setq-default highlight-tabs t)
-
-;; Show trailing white space
-(setq-default show-trailing-whitespace t)
-
-;; Remove useless whitespace before saving a file
-(add-hook 'before-save-hook 'whitespace-cleanup)
-(add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
+;;(show-paren-mode t)
 
 ;; Add package source
 ;;(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -46,7 +36,8 @@
 (defvar my-packages
   '(atom-one-dark-theme
     ido-ubiquitous
-    smex))
+    smex
+    flycheck))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -75,6 +66,7 @@
   (concat user-emacs-directory "customizations/"))
 (defvar my-customizations
   '("ui"
-    "navigation"))
+    "navigation"
+    "editing"))
 (dolist (c my-customizations)
   (load (concat my-customizations-folder c ".el")))
