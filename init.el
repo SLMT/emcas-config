@@ -44,7 +44,9 @@
 
 ;; The list of my packages
 (defvar my-packages
-  '(atom-one-dark-theme))
+  '(atom-one-dark-theme
+    ido-ubiquitous
+    smex))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -72,6 +74,7 @@
 (defvar my-customizations-folder
   (concat user-emacs-directory "customizations/"))
 (defvar my-customizations
-  '("ui"))
+  '("ui"
+    "navigation"))
 (dolist (c my-customizations)
   (load (concat my-customizations-folder c ".el")))
