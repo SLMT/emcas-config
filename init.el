@@ -3,7 +3,7 @@
 (setq user-mail-address "sam123456777@gmail.com")
 
 ;; Ask 'y' or 'n' instead of 'yes' or 'no'
-(fset 'yes-or-no-p 'y-or-n-p)
+;;(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Highlight corresponding parentheses when cursor is on one
 ;;(show-paren-mode t)
@@ -37,7 +37,14 @@
   '(atom-one-dark-theme
     ido-ubiquitous
     smex
-    flycheck))
+    flycheck
+    projectile ;; Sometimes it cannot find this package
+    company
+
+    ;; For Rust
+    rust-mode
+    racer
+    flycheck-rust))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -67,6 +74,9 @@
 (defvar my-customizations
   '("ui"
     "navigation"
-    "editing"))
+    "editing"
+    "miscellaneous"
+    "setup-company-mode"
+    "setup-rust"))
 (dolist (c my-customizations)
   (load (concat my-customizations-folder c ".el")))
