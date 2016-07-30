@@ -2,17 +2,6 @@
 (setq user-full-name "SLMT")
 (setq user-mail-address "sam123456777@gmail.com")
 
-;; Ask 'y' or 'n' instead of 'yes' or 'no'
-;;(fset 'yes-or-no-p 'y-or-n-p)
-
-;; Highlight corresponding parentheses when cursor is on one
-;;(show-paren-mode t)
-
-;; Add package source
-;;(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;;			 ("marmalade" . "http://marmalade-repo.org/packages/")
-;;			 ("melpa" . "http://melpa.org/packages/")))
-
 ;; Define package repositories
 (require 'package)
 (add-to-list 'package-archives
